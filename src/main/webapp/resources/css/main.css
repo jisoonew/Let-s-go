@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+/* 리스트 css */
+
+.container-fluid-table {
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+/* 이동 타켓 */
+.card-placeholder {
+  border: 1px dotted black;
+  margin: 0 1em 1em 0;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  /* 노란색으로 표신되는 것이 주요 포인트 */
+  background-color: greid;
+}
+
+/* 마우스 포인터을 손가락으로 변경 */
+.card:not (.no-move) .card-header {
+  cursor: pointer;
+}
+
+.card {
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px;
+  left: 0px;
+}
+
+.card-title {
+  font-size: 12px;
+  align-items: center;
+}
+
+.title {
+  width: 120px;
+  float: left;
+  margin-top: 5px;
+}
+
+.deleteBox {
+  width: 15px;
+  float: left;
+  margin-left: 0px;
+  text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.createBox1,
+.createBox2,
+.createBox3,
+.createBox4,
+.createBox5,
+.createBox6,
+.createBox7 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.table-box1,
+.table-box2,
+.table-box3,
+.table-box4,
+.table-box5,
+.table-box6,
+.table-box7 {
+  position: relative;
+  border: 1px solid #cecece;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: calc(70vh);
+  width: 150px;
+  float: left;
+}
+
+.card {
+  margin-bottom: 5px;
+}
+
+.date {
+  width: 150px;
+  border: 1px solid #cecece;
+}
+
+.date_container {
+  width: 1050px;
+  margin-left: 10px;
+}
+
+#map_div {
+  margin-left: 30px;
+  top: 100px;
+  float: left;
+  position: sticky;
+  border: 1px solid black;
+}
+
+.memo_padding {
+  position: absolute;
+  width: 1050px;
+  height: 500px;
+  clear: left;
+  margin-top: 670px;
+  padding-left: 30px;
+}
+
+.memo_write {
+  position: absolute;
+  width: 1050px;
+  height: 680px;
+  clear: left;
+}
+
+.container_1 {
+  clear: left;
+  width: 1050px;
+  height: 20px;
+  margin-left: 30px;
+}
+
+.advertisement {
+  clear: left;
+  width: 1580px;
+  height: 330px;
+  margin-left: 30px;
+  top: 30px;
+  border: 1px solid green;
+}
+
+#map_div_container {
+  float: left;
+  width: 500px;
+  height: 1350px;
+}
+
+
+/* 메모장 */
+#memo_title {
+  float: left;
+}
+
+#memo_text {
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+
+#memo_date {
+  float: left;
+}
+
+#date_time_picker {
+  float: left;
+  margin-left: 10px;
+}
+
+#datepicker {
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+
+#memo_time {
+  float: left;
+  margin-left: 10px;
+}
+
+#memo_time_text {
+  float: left;
+}
+
+#memo_place_text {
+  float: left;
+}
+
+#memo_place {
+  float: left;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+
+#logout {
+	  border: none;
+  outline: none;
+  background-color: white;
+}
+
+#Favorites {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+/* .offcanvas-end div:hover{
+	background-color: #dfeaff;
+} */
+
+.input-group-addon,
+.input-group-text {
+  border-left: 0 none;
+  padding: 4px 9px 4px 9px;
+}
+
+.input-group-addon .glyphicon-calendar:before,
+.input-group-text .datePicker-calendar:before {
+  content: " ";
+  background: url(/assets/images/buttons/btn_calendar.png) center center no-repeat;
+  width: 18px;
+  height: 18px;
+  display: block;
+  overflow: hidden;
+}
