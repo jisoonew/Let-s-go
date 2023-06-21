@@ -195,6 +195,55 @@
   border: none;
   outline: none;
   background-color: white;
+  float: left;
+}
+
+#Favorites_cancel {
+  border: none;
+  outline: none;
+  background-color: white;
+  margin-top: 8px;
+    float: right;
+}
+
+#History {
+  border: none;
+  outline: none;
+  background-color: white;
+  float: left;
+}
+
+#History_cancel {
+  border: none;
+  outline: none;
+  background-color: white;
+  margin-top: 8px;
+    float: right;
+}
+
+#Journal {
+  border: none;
+  outline: none;
+  background-color: white;
+  float: left;
+}
+
+#Journal_cancel {
+  border: none;
+  outline: none;
+  background-color: white;
+  margin-top: 8px;
+    float: right;
+}
+
+#Journal_Check {
+	  margin-top: 8px;
+    float: right;
+}
+
+#Journal_btn {
+	float: right;
+	bottom:0px;
 }
 
 /* .offcanvas-end div:hover{
