@@ -59,7 +59,7 @@
       // 여기에 인증 확인 로직 작성
       // 사용자가 입력한 인증 코드를 확인하여 아이디를 찾는 것을 가정
       var verificationCode = document.getElementById('verificationCode').value;
-      if (verificationCode === '123456') {
+      if (verificationCode == '123456') {
         var foundId = 'testuser'; // 아이디를 찾았다고 가정
         document.getElementById('foundId').value = foundId;
       } else {

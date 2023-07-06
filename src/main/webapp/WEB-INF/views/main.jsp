@@ -395,84 +395,84 @@
     // 추가 라벨1
     $(document).on('click', '.createBox1', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box1").append(innerHtml);
     });
 
     // 추가 라벨2
     $(document).on('click', '.createBox2', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box2").append(innerHtml);
     });
 
     // 추가 라벨3
     $(document).on('click', '.createBox3', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box3").append(innerHtml);
     });
 
     // 추가 라벨4
     $(document).on('click', '.createBox4', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box4").append(innerHtml);
     });
 
     // 추가 라벨5
     $(document).on('click', '.createBox5', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box5").append(innerHtml);
     });
 
     // 추가 라벨6
     $(document).on('click', '.createBox6', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box6").append(innerHtml);
     });
 
     // 추가 라벨7
     $(document).on('click', '.createBox7', function () {
       innerHtml = ""
-      innerHtml += `<div class="card text-white bg-info" style="background-color: skyblue;">
+      innerHtml += '<div class="card text-white bg-info" style="background-color: skyblue;">
     	   <div class="card-title">
 			<div class="title">Header</div>
 			<div class="deleteBox">x</div>
 		</div>
-           </div>`
+           </div>'
       $(".table-box7").append(innerHtml);
     });
   </script>
@@ -500,7 +500,7 @@
         
         
         // 팝업 스타일 1
-        var infoWindowContent = `
+        var infoWindowContent = '
             <div class="_tmap_preview_popup_1">
                 <div class="_tmap_preview_popup_image_s">
                     <img src="https://tmapapi.sktelecom.com/resources/images/sample/img-skt.png" alt="">
@@ -511,7 +511,7 @@
                     <div class="_tmap_preview_popup_address">(지번) 저동1가 114</div>
                 </div>
             </div>
-        `;
+        ';
         
         //Popup 객체 생성.
         var infoWindow = new Tmapv2.InfoWindow({

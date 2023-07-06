@@ -91,13 +91,13 @@
         marker1 = new Tmapv2.Marker({
             position : markerPosition,
             // icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_p.png",
-            iconHTML: `
+            iconHTML: '
             <div class='_t_marker' style="position:relative;" >
                 <img src="/lib/img/_icon/marker_blue.svg" style="width:48px;height:48px;position:absolute;"/>
                 <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                 P</div>
             </div>
-            `,
+            ',
             offset: new Tmapv2.Point(24, 38),
             iconSize : new Tmapv2.Size(24, 38),
             map : map
@@ -179,7 +179,7 @@ lat
                     
                     //라인 정보를 배열에 담습니다.
                     lineArr.push(polyline_);
-                    let resultStr = `
+                    let resultStr = '
                         <div class="_result_panel_bg">
                             <div class="_result_panel_area">
                                 <div class="__reverse_geocoding_result" style="flex-grow: 1;">
@@ -203,7 +203,7 @@ lat
                                 </div>
                             </div>
                         </div>
-                        `;
+                        ';
                     var resultDiv = document.getElementById("apiResult");
                     resultDiv.innerHTML = resultStr;
                     
@@ -234,13 +234,13 @@ lat
         marker1 = new Tmapv2.Marker({
             position : markerPosition,
             // icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_p.png",
-            iconHTML: `
+            iconHTML: '
             <div class='_t_marker' style="position:relative;" >
                 <img src="/lib/img/_icon/marker_blue.svg" style="width:48px;height:48px;position:absolute;"/>
                 <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                 P</div>
             </div>
-            `,
+            ',
             offset: new Tmapv2.Point(24, 38),
             iconSize : new Tmapv2.Size(24, 38),
             map : map
@@ -278,7 +278,7 @@ lat
                 if (arrResult.buildingName != '') {//빌딩명만 존재하는 경우
                     jibunAddr += (' ' + arrResult.buildingName);
                 }
-                let resultStr = `
+                let resultStr = '
                 <div class="_result_panel_bg">
                     <div class="_result_panel_area">
                         <div class="__reverse_geocoding_result" style="flex-grow: 1;">
@@ -302,7 +302,7 @@ lat
                         </div>
                     </div>
                 </div>
-                `;
+                ';
                 
                 var resultDiv = document.getElementById("apiResult");
                 resultDiv.innerHTML = resultStr;
@@ -334,10 +334,10 @@ lat
                 }
                 
                 var innerHtml =    // Search Reulsts 결과값 노출 위한 변수
-                `
+                '
                 <div class="_result_panel_bg _scroll_padding">
                     <div class="_result_panel_scroll">
-                `;
+                ';
                 var positionBounds = new Tmapv2.LatLngBounds();        //맵에 결과물 확인 하기 위한 LatLngBounds객체 생성
                 
                 for(var k in resultpoisData){
@@ -359,16 +359,16 @@ lat
                     const marker3 = new Tmapv2.Marker({
                         position : markerPosition,
                         //icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png",
-                        iconHTML:`
+                        iconHTML:'
                             <div class='_t_marker' style="position:relative;" >
                             <img src="/lib/img/_icon/marker_grey.svg" style="width:48px;height:48px;position:absolute;"/>
                             <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                             ${Integer.parseInt(k)+1}</div>
                             </div>
-                        `,
+                        ',
                         iconSize : new Tmapv2.Size(24, 38),
                         title : name,
-                        label: `<span style="display:none;">${k}_${id}</span>`,
+                        label: '<span style="display:none;">${k}_${id}</span>',
                         map:map
                     });
                     
@@ -377,13 +377,13 @@ lat
                         for(let tMarker of markerPoi) {
                             const labelInfo = $(tMarker.getOtherElements()).text();
                             const forK = labelInfo.split("_")[0];
-                            tMarker.setIconHTML(`
+                            tMarker.setIconHTML('
                                 <div class='_t_marker' style="position:relative;" >
                                 <img src="/lib/img/_icon/marker_grey.svg" style="width:48px;height:48px;position:absolute;"/>
                                 <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                                 ${Integer.parseInt(forK)+1}</div>
                                 </div>
-                            `);
+                            ');
                              // marker z-index 초기화
                              $(tMarker.getOtherElements()).next('div').css('z-index', 100);
                         }
@@ -392,17 +392,17 @@ lat
                         const labelInfo = $(marker3.getOtherElements()).text();
                         const thisK = labelInfo.split("_")[0];
                         const thisId = labelInfo.split("_")[1];
-                        marker3.setIconHTML(`
+                        marker3.setIconHTML('
                             <div class='_t_marker' style="position:relative;" >
                             <img src="/lib/img/_icon/marker_blue.svg" style="width:48px;height:48px;position:absolute;"/>
                             <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                             ${Integer.parseInt(thisK)+1}</div>
                             </div>
-                        `);
+                        ');
                         poiDetail(thisId, thisK);
                     });
                     
-                    innerHtml += `
+                    innerHtml += '
                         <div class="_search_item" id="poi_${k}">
                             <div class="_search_item_poi">
                                 <div class="_search_item_poi_icon _search_item_poi_icon_grey">
@@ -434,7 +434,7 @@ lat
                             
                         </div>
                         ${(resultpoisData.length-1) == Integer.parseInt(k) ? "": '<div class="_search_item_split"></div>'}
-                    `;
+                    ';
                     markerPoi.push(marker3);
                     positionBounds.extend(markerPosition);    // LatLngBounds의 객체 확장
                 }
@@ -456,23 +456,23 @@ lat
         for(let tMarker of markerPoi) {
             const labelInfo = $(tMarker.getOtherElements()).text();
             const forK = labelInfo.split("_")[0];
-            tMarker.setIconHTML(`
+            tMarker.setIconHTML('
                 <div class='_t_marker' style="position:relative;" >
                 <img src="/lib/img/_icon/marker_grey.svg" style="width:48px;height:48px;position:absolute;"/>
                 <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                 ${Integer.parseInt(forK)+1}</div>
                 </div>
-            `);
+            ');
              // marker z-index 초기화
              $(tMarker.getOtherElements()).next('div').css('z-index', 100);
         }
-        markerPoi[thisK].setIconHTML(`
+        markerPoi[thisK].setIconHTML('
             <div class='_t_marker' style="position:relative;" >
             <img src="/lib/img/_icon/marker_blue.svg" style="width:48px;height:48px;position:absolute;"/>
             <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
             ${Integer.parseInt(thisK)+1}</div>
             </div>
-        `);
+        ');
         // 선택한 marker z-index 처리 
         $(markerPoi[thisK].getOtherElements()).next('div').css('z-index', 101);
         var scrollOffset = $("#poi_"+thisK)[0].offsetTop - $("._result_panel_scroll")[0].offsetTop
@@ -508,24 +508,24 @@ lat
                 
                 var labelPosition = new Tmapv2.LatLng(lat, lon);
                 if(bldNo1 !== "") {
-                    bldAddr += ` ${bldNo1}`;
+                    bldAddr += ' ${bldNo1}';
                 }
                 if(bldNo2 !== "") {
-                    bldAddr += `-${bldNo2}`;
+                    bldAddr += '-${bldNo2}';
                 }
-                var content = `
+                var content = '
                     <div class="_tmap_preview_popup_text">
                         <div class="_tmap_preview_popup_info">
                             <div class="_tmap_preview_popup_title">${name}</div>
                             <div class="_tmap_preview_popup_address">${bldAddr}</div>
                             <div class="_tmap_preview_popup_address">${zipCode}</div>
                             <div class="_tmap_preview_popup_address">${bizCatName}</div>
-                `;                           
+                ';                           
                 if(tel !== "") {
-                    content += `<div class="_tmap_preview_popup_address">${tel}</div>`;
+                    content += '<div class="_tmap_preview_popup_address">${tel}</div>';
                 }
                 if(parkingString !== "") {
-                    content += `<div class="_tmap_preview_popup_address">${parkingString}</div>`;
+                    content += '<div class="_tmap_preview_popup_address">${parkingString}</div>';
                 }
                 
                 content += "</div></div>";
@@ -613,12 +613,12 @@ lat
                 onComplete: function (result) {
                     var resultData = result._responseData.features;
                     //결과 출력
-                    var appendHtml = `
+                    var appendHtml = '
                         <div class="_route_item">
                             <div class="_route_item_type ${drawMode == "apiRoutesPedestrian" ? "__color_blue" : ""}" onclick="routesRedrawMap('apiRoutesPedestrian');" style="cursor:">보행자 경로 안내</div>
                             <div class="_route_item_info">${((resultData[0].properties.totalTime) / 60).toFixed(0)}분 | ${((resultData[0].properties.totalDistance) / 1000).toFixed(1)}km</div>
                         </div>
-                    `;
+                    ';
                     writeApiResultHtml("apiRoutesPedestrian", appendHtml);
                     if (drawMode == "apiRoutesPedestrian") {
                         //기존 그려진 라인 & 마커가 있다면 초기화
@@ -627,13 +627,13 @@ lat
                         markerStart = new Tmapv2.Marker({
                             position: new Tmapv2.LatLng(starty, startx),
                             // icon: "http://topopen.tmap.co.kr/imgs/start.png",
-                            iconHTML: `
+                            iconHTML: '
                             <div class='_t_marker' style="position:relative;" >
                                 <img src="/lib/img/_icon/marker_red.svg" style="width:48px;height:48px;position:absolute;"/>
                                 <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                                 출발</div>
                             </div>
-                            `,
+                            ',
                             offset: new Tmapv2.Point(24, 38),
                             iconSize: new Tmapv2.Size(24, 38),
                             map: map
@@ -642,13 +642,13 @@ lat
                         markerEnd = new Tmapv2.Marker({
                             position: new Tmapv2.LatLng(endy, endx),
                             // icon: "http://topopen.tmap.co.kr/imgs/arrival.png",
-                            iconHTML: `
+                            iconHTML: '
                             <div class='_t_marker' style="position:relative;" >
                                 <img src="/lib/img/_icon/marker_red.svg" style="width:48px;height:48px;position:absolute;"/>
                                 <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                                 도착</div>
                             </div>
-                            `,
+                            ',
                             offset: new Tmapv2.Point(24, 38),
                             iconSize: new Tmapv2.Size(24, 38),
                             map: map
@@ -749,7 +749,7 @@ lat
             var params = {
                 onComplete: function(result) {
                     var resultData = result._responseData.features;
-                    var appendHtml = `
+                    var appendHtml = '
                         <div class="_route_item">
                             <div class="_route_item_type ${drawMode == "apiRoutesCar_" + mode || drawMode == "apiRoutesMulti_" + mode ? "__color_blue" : ""}" onclick="routesRedrawMap('apiRoutesCar', '${mode}');">${modes[mode]}</div>
                             <div class="_route_item_info">
@@ -758,7 +758,7 @@ lat
                                 | ${resultData[0].properties.totalFare}원 
                                 | 택시 ${resultData[0].properties.taxiFare}원</div>
                         </div>
-                    `;
+                    ';
                     writeApiResultHtml("apiRoutesCar_"+mode, appendHtml);
                     if(drawMode == "apiRoutesCar_" + mode || drawMode == "apiRoutesMulti_" + mode) {
                         reset();
@@ -782,13 +782,13 @@ lat
                                 if (properties.pointType == "S") { //출발지 마커
                                     markerStart = new Tmapv2.Marker({
                                         position : markerPosition,
-                                        iconHTML: `
+                                        iconHTML: '
                                         <div class='_t_marker' style="position:relative;" >
                                             <img src="/lib/img/_icon/marker_red.svg" style="width:48px;height:48px;position:absolute;"/>
                                             <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                                             출발</div>
                                         </div>
-                                        `,
+                                        ',
                                         offset: new Tmapv2.Point(24, 38),
                                         iconSize : new Tmapv2.Size(24, 38),
                                         map : map
@@ -796,13 +796,13 @@ lat
                                 } else if (properties.pointType == "E") { //도착지 마커
                                     markerEnd = new Tmapv2.Marker({
                                         position : markerPosition,
-                                        iconHTML: `
+                                        iconHTML: '
                                         <div class='_t_marker' style="position:relative;" >
                                             <img src="/lib/img/_icon/marker_red.svg" style="width:48px;height:48px;position:absolute;"/>
                                             <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                                             도착</div>
                                         </div>
-                                        `,
+                                        ',
                                         offset: new Tmapv2.Point(24, 38),
                                         iconSize : new Tmapv2.Size(24, 38),
                                         map : map
@@ -1033,14 +1033,14 @@ lat
             $(this).removeClass('wp_add wp_clear');
             $(this).addClass('wp_clear');
         });
-        $("#wpList").append(`
+        $("#wpList").append('
             <div class="__space_10_h"></div>
             <div class="waypoint_input _map_overlay_row" data-idx="0">
                 <input type="hidden" name="multipos" />
                 <input type="text" class="_search_entry _search_entry_short" onkeyup="onKeyupSearchPoi(this);" placeholder="경유지를 입력하세요." style="padding-right: 45px;">
                 <button class="wp_add" onclick="onMultiButton(this);"></button>
             </div>
-        `);
+        ');
         // 총 개수가 5개 이상이면 - 로 변경
         var cnt2 = $(".waypoint_input").length;
         if(cnt2 >= 5) {
@@ -1158,13 +1158,13 @@ lat
             markerStart = new Tmapv2.Marker({
                 position : new Tmapv2.LatLng(y, x),
                 // icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png",
-                iconHTML: `
+                iconHTML: '
                 <div class='_t_marker' style="position:relative;" >
                     <img src="/lib/img/_icon/marker_red.svg" style="width:48px;height:48px;position:absolute;"/>
                     <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                     출발</div>
                 </div>
-                `,
+                ',
                 offset: new Tmapv2.Point(24, 38),
                 iconSize : new Tmapv2.Size(24, 38),
                 map : map
@@ -1182,20 +1182,20 @@ lat
             markerEnd = new Tmapv2.Marker({
                 position : new Tmapv2.LatLng(y, x),
                 // icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_e.png",
-                iconHTML: `
+                iconHTML: '
                 <div class='_t_marker' style="position:relative;" >
                     <img src="/lib/img/_icon/marker_red.svg" style="width:48px;height:48px;position:absolute;"/>
                     <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                     도착</div>
                 </div>
-                `,
+                ',
                 offset: new Tmapv2.Point(24, 38),
                 iconSize : new Tmapv2.Size(24, 38),
                 map : map
             });
         } else if(type == 'wp') {
             const currentSize = $(".waypoint_input").length;
-            const prependHtml = `
+            const prependHtml = '
             <div class="__space_10_h"></div>
             <div class="waypoint_input _wp_not_empty _map_overlay_row" data-idx="0">
                 <input type="hidden" name="multipos" value="${x},${y}">
@@ -1203,8 +1203,8 @@ lat
                 <button onclick="clickSearchPois(this);" class="_delete_address_btn" style="margin-top: 14px; margin-bottom: 14px; pointer-events: all; cursor: pointer;"></button>
                 <div style="width: 90px;"></div>
             </div>
-            `;
-            const emptyHtml = `
+            ';
+            const emptyHtml = '
             <div class="__space_10_h"></div>
             <div class="waypoint_input _map_overlay_row" data-idx="0">
                 <input type="hidden" name="multipos" />
@@ -1212,7 +1212,7 @@ lat
                 <button onclick="clickSearchPois(this);" class="_search_address_btn" style="margin-top: 14px; margin-bottom: 14px; pointer-events: all; cursor: pointer;"></button>
                 <div style="width: 90px;"></div>
             </div>
-            `;
+            ';
             if(currentSize < 5) {
                 const $_deleteObj = $("#wpList .waypoint_input:last");
                 $_deleteObj.prev('.__space_10_h').remove();
@@ -1243,7 +1243,7 @@ lat
     function clearWaypoint(destObj) {
         const currentSize = $(".waypoint_input._wp_not_empty").length;
         console.log("clearWaypoint: ", currentSize);
-        const emptyHtml = `
+        const emptyHtml = '
             <div class="__space_10_h"></div>
             <div class="waypoint_input _map_overlay_row" data-idx="0">
                 <input type="hidden" name="multipos" />
@@ -1251,7 +1251,7 @@ lat
                 <button onclick="clickSearchPois(this);" class="_search_address_btn" style="margin-top: 14px; margin-bottom: 14px; pointer-events: all; cursor: pointer;"></button>
                 <div style="width: 90px;"></div>
             </div>
-            `;
+            ';
         const $_deleteObj = $(destObj);
         $_deleteObj.prev('.__space_10_h').remove();
         $_deleteObj.remove();
@@ -1281,13 +1281,13 @@ lat
             markerWp[idx] = new Tmapv2.Marker({
                 position : new Tmapv2.LatLng(viaY, viaX),
                 // icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + idx + ".png",
-                iconHTML: `
+                iconHTML: '
                 <div class='_t_marker' style="position:relative;" >
                     <img src="/lib/img/_icon/marker_blue.svg" style="width:48px;height:48px;position:absolute;"/>
                     <div style="position:absolute; width:48px;height:42px; display:flex; align-items:center; justify-content: center; color:#FAFBFF; font-family: 'SUIT';font-style: normal;font-weight: 700;font-size: 15px;line-height: 19px;">
                     ${idx+1}</div>
                 </div>
-                `,
+                ',
                 offset: new Tmapv2.Point(24, 38),
                 iconSize : new Tmapv2.Size(24, 38),
                 map:map
@@ -1298,7 +1298,7 @@ lat
     function writeApiResultHtml(type, string) {
         if($("#apiResult div#results").length == 0) {
             $("#apiResult").empty();
-            $("#apiResult").html(`
+            $("#apiResult").html('
                 <div class="_result_panel_bg">
                     <div class="_result_panel_scroll">
                         <div class="__space_10_h"></div>
@@ -1308,15 +1308,15 @@ lat
                         <div id="apiRoutesMulti"></div>
                     </div>
                 </div>
-            `);
+            ');
         }
         if(type.startsWith("apiRoutesCar_")) {
             if($("#apiResult #apiRoutesCar").find("#"+type).length == 0 ) {
-                $("#apiResult #apiRoutesCar").append(`<div id="${type}">${string}</div>`);
+                $("#apiResult #apiRoutesCar").append('<div id="${type}">${string}</div>');
             }
         } else if(type.startsWith("apiRouteSequential_") || type.startsWith("routesOptimization")) {
             if($("#apiResult #apiRoutesMulti").find("#"+type).length == 0 ) {
-                $("#apiResult #apiRoutesMulti").append(`<div id="${type}">${string}</div>`);
+                $("#apiResult #apiRoutesMulti").append('<div id="${type}">${string}</div>');
             }
         } else {
             $("#apiResult").find("#"+type).html(string);
