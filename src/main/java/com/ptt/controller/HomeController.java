@@ -33,7 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "map_search";
+		return "map_pedestrian";
 	}
 	
 }
